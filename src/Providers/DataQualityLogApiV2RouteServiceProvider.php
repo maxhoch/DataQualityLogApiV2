@@ -17,9 +17,31 @@ class DataQualityLogApiV2RouteServiceProvider extends RouteServiceProvider
                 'namespace' => 'DataQualityLogApiV2\\Api\\Resources'
             ],
             function (ApiRouter $api) {
+
+                /*
+                 * Health check
+                 */
                 $api->get(
                     'dq-v2/ping',
                     'PingResource@index'
+                );
+
+                /*
+                 * Plenty log access
+                 */
+                $api->get(
+                    'dq-v2/logs',
+                    'LogResource@index'
+                );
+
+                $api->post(
+                    'dq-v2/logs/search',
+                    'LogResource@search'
+                );
+
+                $api->get(
+                    'dq-v2/logs/{id}',
+                    'LogResource@show'
                 );
             }
         );
