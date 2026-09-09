@@ -1,0 +1,9 @@
+{
+  "name": "DataQualityLogApiV2",
+  "namespace": "DataQualityLogApiV2",
+  "type": "general",
+  "version": "1.0.0",
+  "description": "Minimal PlentyONE REST API V2 for marketplace data quality workflows.",
+  "author": "Internal",
+  "serviceProvider": "DataQualityLogApiV2\\Providers\\DataQualityLogApiV2ServiceProvider"
+}
